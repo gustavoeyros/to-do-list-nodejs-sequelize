@@ -6,7 +6,10 @@
 
     <div class="list">
         {{#each list}}
-        <p>{{this.description}}</p>
+        <p>{{this.description}}
+            <a href="/message/edit/{{this.id}}">Editar</a>
+            <a href="/message/delete/{{this.id}}">Apagar</a>
+        </p>
         {{/each}}
     </div>
 </div>
