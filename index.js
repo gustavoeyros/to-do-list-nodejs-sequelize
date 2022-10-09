@@ -6,6 +6,7 @@ const app = express()
 app.use(express.json())
 app.engine('handlebars', exphbs.engine())
 app.set('view engine', 'handlebars')
+app.use(express.static('public'))
 app.use(express.urlencoded({
     extended: true
 }))

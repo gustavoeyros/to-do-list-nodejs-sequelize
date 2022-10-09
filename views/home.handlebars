@@ -4,12 +4,14 @@
         <input type="submit" value="Enviar">
     </form>
 
-    <div class="list">
+   
         {{#each list}}
-        <p>{{this.description}}
+         <div class="list">
+        <p>{{this.description}}</p>
             <a href="/message/edit/{{this.id}}">Editar</a>
             <a href="/message/delete/{{this.id}}">Apagar</a>
-        </p>
+     
+        </div>
         {{/each}}
-    </div>
+    
 </div>
