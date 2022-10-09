@@ -10,8 +10,15 @@ app.use(express.urlencoded({
     extended: true
 }))
 
-app.get('/', (req, res)=>{
-    res.render('home')
+app.post('/message/create', async(req, res)=>{
+    const description = req.body.description
+    await Message.create({description})
+    res.redirect('/')
+})
+
+app.get('/', async(req, res)=>{
+    const list = await Message.findAll({raw: true})
+    res.render('home', {list})
 })
 
 

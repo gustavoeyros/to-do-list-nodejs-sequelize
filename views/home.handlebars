@@ -1,1 +1,12 @@
-<h1>Bem-vindo</h1>
+<div class="container">
+    <form action="/message/create" method="POST">
+        <input type="text" name="description" placeholder="Digite sua tarefa">
+        <input type="submit" value="Enviar">
+    </form>
+
+    <div class="list">
+        {{#each list}}
+        <p>{{this.description}}</p>
+        {{/each}}
+    </div>
+</div>
